@@ -1,0 +1,12 @@
+<h2>Cursos en desarrollo</h2>
+<div class="courses-menu">
+    <div *ngFor="let course of courses" [class.hidden]="!course.develop">
+        <a *ngIf="course.develop"  routerLink="/courses/{{course.id}}">
+        {{course.name}}
+        </a>
+        <button
+            type="button"
+            (click)="changeDevelop(course)"
+        >x</button>
+    </div>
+</div>
